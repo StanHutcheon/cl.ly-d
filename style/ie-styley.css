@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* ohai sxc w/ ie :p */
+.title {
+	color: #191919;
+}
+.subtitle {
+	color: #7f7f7f;
+}
+.linkb4 {
+	color: #bfbfbf;
+}
+.opacy {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+.buttonz {
+	background-color: #e5e5e5;
+	color: #999999;
+	border: 1px solid #cccccc;
+	text-decoration:underline;
+}
+.highlight {
+	border:1px #ccccfd solid; 
+	background-color:#e4e4ff;
+	color: #7f7f7f;
+}

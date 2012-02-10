@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* ohai sxc */
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	font-size:36px;
+}
+.logo {
+	padding-top:20px;
+	margin-bottom:20px;
+}
+.title {
+	margin-bottom:20px;
+	opacity:0.9;
+}
+.subtitle {
+	font-size:16px;
+	opacity:0.5;
+	font-weight:bold;
+	margin-bottom: 5px;
+}
+.split {
+	width:700px;
+	height: 150px;
+	border:#CCCCCC 1px solid;
+	margin: 0 auto;
+	margin-top:20px;
+}
+.left {
+	float:left;
+	width:350px;
+	height:150px;
+	border:#CCCCCC 1px solid;
+	margin: 0 auto;
+	margin-top:-1px;
+	margin-left:-1px;
+}
+.right {
+	width:349px;
+	height:150px;
+	border:#CCCCCC 1px solid;
+	margin: 0 auto;
+	margin-top:-1px;
+	margin-right:-1px;
+}
+.dl {
+	color: #333;
+}
+.dl.active {
+	color: #000;
+}
+.linkb4 {
+	opacity:0.5;
+}
+.buttonz {
+	font-size:14px; 
+	margin: 0 auto; 
+	border: 1px solid #999; 
+	width:72px; 
+	padding-left:10px; 
+	padding-top:8px; 
+	padding-right:10px; 
+	padding-bottom: 10px; 
+	background-color:#CCC;
+}
+.highlight {
+	border:1px #9999FB solid; 
+	background-color:#CACAFF;
+}
