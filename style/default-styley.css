@@ -42,8 +42,13 @@ body {
 	margin-top:-1px;
 	margin-right:-1px;
 }
+.sc {
+	color: #333;
+	float:right;
+}
 .dl {
 	color: #333;
+	float:left;
 }
 .dl.active {
 	color: #000;
@@ -65,4 +70,8 @@ body {
 .highlight {
 	border:1px #9999FB solid; 
 	background-color:#CACAFF;
+}
+.incontainer {
+	width: 200px;
+	margin: 0 auto;
 }
