@@ -1,6 +1,6 @@
 cl.ly'd allows users to have custom domain URLs for use with CloudApp for free.
 
-Just upload cllyd.php to any website (rename it to index.php if you dont want to type: example.com/cllyd.php?u=blah) where blah is the end of your cl.ly url (cl.ly/<b>thisbit</b>)
+Just upload cllyd.php to any website (rename it to index.php if you dont want to type: example.com/cllyd.php?u=blah) where blah is the end of your cl.ly url (cl.ly/thisbit)
 
 Just either use the file with a POST method in HTML (as shown in index.html) or just the php file (example.com/cllyd.php?u=blah)
 
