@@ -35,6 +35,17 @@ iframe {
 	margin: 0 auto;
 }
 </style>
+<!--[if gte IE 5]>
+	<style type="text/css">
+    html, body, iframe {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	background-color:#000000;
+	color:#FFFFFF;
+	}
+    </style>
+<![endif]-->
 </head>
 <body vlink="#FFFFFF" alink="#CCCCCC" link="#FFFFFF">
 <div align="center">
