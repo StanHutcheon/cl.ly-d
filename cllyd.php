@@ -2,22 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- cl.ly'd written by Stan Hutcheon 2012 -->
 <head>
-<title><?php 
-if(htmlspecialchars($_GET["u"]) == "") {
-$title="CloudApp -- Not Found";
-	if($_POST["url"] == "") {
-		$title =  "CloudApp -- Not Found";
-	} else {
-		$title = "CloudApp -- " . $_POST["url"];
-	}
-} else {
-	$title =  "CloudApp -- " . htmlspecialchars($_GET["u"]);
-}
-echo $title;
-?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-body {
+html, body, iframe {
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
@@ -35,37 +22,17 @@ iframe {
 	margin: 0 auto;
 }
 </style>
-<!--[if gte IE 5]>
-	<style type="text/css">
-    html, body, iframe {
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-	background-color:#000000;
-	color:#FFFFFF;
-	}
-    </style>
-<![endif]-->
 </head>
 <body vlink="#FFFFFF" alink="#CCCCCC" link="#FFFFFF">
 <div align="center">
 <?php
-function curPageURL() {
- $pageURL = 'http';
- if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
- $pageURL .= "://";
- if ($_SERVER["SERVER_PORT"] != "80") {
-  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
- } else {
-  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
- }
- return $pageURL;
-}
+/* Turn off error reporting as it changes the site (and its not needed) */
+error_reporting(0);
 
 if(htmlspecialchars($_GET["u"]) == "") {
 	if($_POST["url"] == "") {} 
 	else {
-		$url2 = "<h2>share: <a href='" . curPageURL() . "?u=" . $_POST["url"] . "'>". curPageURL() . "?u=" . $_POST["url"] ."</h2>";
+		$url2 = "<h2>share: <a href='http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] . "?u=" . $_POST["url"] . "'>http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] . "?u=" . $_POST["url"] ."</h2>";
 	}
 }
 echo $url2;
@@ -83,5 +50,19 @@ if(htmlspecialchars($_GET["u"]) == "") {
 }
 echo $url;
 ?>" frameborder="0"></iframe>
+<!-- This has to go here as a PHP error changes the title to the name of the error :p #lazy -->
+<title><?php 
+if(htmlspecialchars($_GET["u"]) == "") {
+$title="CloudApp -- Not Found";
+	if($_POST["url"] == "") {
+		$title =  "CloudApp -- Not Found";
+	} else {
+		$title = "CloudApp -- " . $_POST["url"];
+	}
+} else {
+	$title =  "CloudApp -- " . htmlspecialchars($_GET["u"]);
+}
+echo $title;
+?></title>
 </body>
 </html>
